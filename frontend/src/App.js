@@ -1,9 +1,16 @@
-import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <h1 className="font-bold text-3xl">Hello</h1>,
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <h1 className="font-bold text-3xl">Hello</h1>
+      <RouterProvider router={appRouter} />
     </div>
   );
 }
