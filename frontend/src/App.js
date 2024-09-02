@@ -1,9 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+//pages
+import Home from "./Pages/Home";
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <h1 className="font-bold text-3xl">Hello</h1>,
+    element: <Home />,
   },
 ]);
 
