@@ -2,6 +2,7 @@ import React from "react";
 
 //components
 import Intro from "../components/Intro";
+import Gallery from "../components/Gallery";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <div className="hidden md:block w-1/2"></div>
       <div className="w-full md:w-1/2">
         <Intro />
+        <Gallery />
       </div>
     </div>
   );
