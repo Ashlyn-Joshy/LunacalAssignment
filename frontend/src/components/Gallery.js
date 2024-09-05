@@ -3,8 +3,15 @@ import Axios from "axios";
 
 const Gallery = (files) => {
   const [images, setImages] = useState(() => {
+    const defaultImages = [
+      "https://res.cloudinary.com/dhkwyh24o/image/upload/v1725524868/dxpgwe1tranniiyriy26.jpg",
+      "https://res.cloudinary.com/dhkwyh24o/image/upload/v1725524868/dxpgwe1tranniiyriy26.jpg",
+      "https://res.cloudinary.com/dhkwyh24o/image/upload/v1725524868/dxpgwe1tranniiyriy26.jpg",
+    ];
     const savedImages = localStorage.getItem("uploadedImages");
-    return savedImages ? JSON.parse(savedImages) : [];
+    return savedImages
+      ? [...defaultImages, ...JSON.parse(savedImages)]
+      : defaultImages;
   });
 
   const [currentIndex, setCurrentIndex] = useState(0);
